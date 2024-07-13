@@ -33,12 +33,6 @@ impl From<Vec<u8>> for Bytes {
     }
 }
 
-impl Into<alloy_primitives::Bytes> for Bytes {
-    fn into() -> alloy_primitives::Bytes {
-        alloy_primitives::Bytes::from(Self)
-    }
-}
-
 impl Deref for Bytes {
     type Target = Vec<u8>;
 
