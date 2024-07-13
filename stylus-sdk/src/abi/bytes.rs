@@ -21,6 +21,18 @@ impl From<Bytes> for Vec<u8> {
     }
 }
 
+impl From<alloy_primitives::Bytes> for Bytes {
+    fn from(value: alloy_primitives::Bytes) -> Self {
+        Self(value.to_vec())
+    }
+}
+
+impl From<Vec<u8>> for Bytes {
+    fn from(b: Vec<u8>) -> Self {
+        Self(b)
+    }
+}
+
 impl From<Vec<u8>> for Bytes {
     fn from(b: Vec<u8>) -> Self {
         Self(b)
