@@ -34,8 +34,8 @@ impl From<Vec<u8>> for Bytes {
 }
 
 impl Into<alloy_primitives::Bytes> for Bytes {
-    fn into(Self) -> alloy_primitives::Bytes {
-        alloy_primitives::Bytes::from(Self.to_vec())
+    fn into() -> alloy_primitives::Bytes {
+        alloy_primitives::Bytes::from(Self)
     }
 }
 
